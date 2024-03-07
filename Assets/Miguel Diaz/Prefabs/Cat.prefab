@@ -327,6 +327,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19c8a066a603c254fbc855d84185b06d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  foundSound: {fileID: 8300000, guid: 7da30bcb149de4343bd8c77e8ceaf46e, type: 3}
+  spawn: {fileID: 0}
 --- !u!1 &6844839202431410150
 GameObject:
   m_ObjectHideFlags: 0

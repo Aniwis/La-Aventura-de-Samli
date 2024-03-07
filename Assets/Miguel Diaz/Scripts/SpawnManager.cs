@@ -11,6 +11,8 @@ public class SpawnManager : MonoBehaviour
     // Lista que guarda las posiciones
     public List <GameObject> spawnPoints;
 
+    int lastSpawn;
+
 /*     // Vector que guarda la posicion
     private Vector3 spawnPos = new Vector3 (5,0,0);
 
@@ -22,7 +24,7 @@ public class SpawnManager : MonoBehaviour
     void Start()
     {
         // Crea una instancia del gato
-        Instantiate (spawnCat, spawnPoints[Random.Range(0, spawnPoints.Count)].transform.position, spawnCat.transform.rotation);
+        SpawnGenerator();
     }
 // --------------------------------------------------------------------------------------------------------
     void Update()
@@ -31,6 +33,21 @@ public class SpawnManager : MonoBehaviour
     }
 
 // --------------------------------------------------------------------------------------------------------
+
+    // Metodo para generar posiciones
+    public void SpawnGenerator(){
+
+        int spawn = Random.Range(0, spawnPoints.Count);
+        
+        if (spawn != lastSpawn){
+            Instantiate (spawnCat, spawnPoints[spawn].transform.position, spawnCat.transform.rotation);
+        }else{
+            SpawnGenerator();
+            return ;
+        }
+        
+        lastSpawn = spawn;
+    }
 /*     // Meetodo que genera posiciones aleatorias
     private Vector3 SpawnPositionGenerator(){
         
