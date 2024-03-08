@@ -6,9 +6,11 @@ using UnityEngine;
 public class Timer : MonoBehaviour
 {
     [SerializeField] private float timeRemaining = 10f;
+    [SerializeField] private GameObject gameManager;
     private bool timerIsRunning = false;
 
     public TextMeshProUGUI timeText;
+    public GameObject finishScreen;
 
     private void Start()
     {
@@ -46,7 +48,8 @@ public class Timer : MonoBehaviour
 
     void TimeIsUp()
     {
-        Debug.Log("¡El tiempo se ha agotado!");
+        gameManager.GetComponent<GameManager>().FinishGame();
+        finishScreen.SetActive(true);
         timeText.text = "00:00";
     }
 }

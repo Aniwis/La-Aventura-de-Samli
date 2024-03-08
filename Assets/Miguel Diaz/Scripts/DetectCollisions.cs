@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DetectCollisions : MonoBehaviour
 {
+    private GameObject gameManager;
 
     // Variable para el audioclip
     public AudioClip foundSound;
@@ -12,8 +13,9 @@ public class DetectCollisions : MonoBehaviour
     private AudioSource foundClip;
 
     public GameObject spawn;
+
+    private bool hasBeenFound = false;
 // -----------------------------------------------------------------------------------
-    // Start is called before the first frame update
     void Start()
     {
         // Inicializa el componente del audiosource
@@ -21,36 +23,26 @@ public class DetectCollisions : MonoBehaviour
 
         // Guarda el componente Spawn Manager
         spawn = GameObject.Find("Spawn Manager");
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        gameManager = GameObject.Find("GameManager");
     }
 // -----------------------------------------------------------------------------------
 
     void OnTriggerEnter(Collider collision)
     {
-        
+        if (collision.CompareTag("Player") && !hasBeenFound)
+        {
+            hasBeenFound = true;
+            foundClip.PlayOneShot(foundSound, 0.8f);
 
-            if (collision.CompareTag("Player")){
-
-                foundClip.PlayOneShot(foundSound, 0.8f);
-
-                StartCoroutine(saveCat());
-            }
-
-        
-        spawn.GetComponent<SpawnManager>().SpawnGenerator();
+            StartCoroutine(saveCat());
+        }
     }
 // -----------------------------------------------------------------------------------
 
-    IEnumerator saveCat(){   
-
+    IEnumerator saveCat(){
+        gameManager.GetComponent<GameManager>().AddPoint();
         yield return new WaitForSeconds (2);
-                    
-            Destroy(gameObject);
+        spawn.GetComponent<SpawnManager>().SpawnGenerator();
+        Destroy(gameObject);
     }
 }

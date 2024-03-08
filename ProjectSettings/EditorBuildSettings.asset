@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Lizbeth_Grisales/Scenes/Menu.unity
     guid: b2d293ec8b7183643b4c78742f8eff5b
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 1f4419c9f7eab6d46a350d26d948519a
+    path: Assets/Scenes/MainScene.unity
+    guid: 966496ea3a6015b48813ca39b547533a
   m_configObjects: {}
