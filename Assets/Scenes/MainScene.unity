@@ -25,8 +25,8 @@ RenderSettings:
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 0
-  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubtractiveShadowColor: {r: 0.22227661, g: 0.26175198, b: 0.4245283, a: 1}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 0b846be1b116429409a7669cacf2a62e, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748171, a: 1}
+  m_IndirectSpecularColor: {r: 0.8252481, g: 0.85082597, b: 0.96561235, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 2b3249f988af45d4eaf1a617b3c5d0e8, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -7247,7 +7247,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7846087726238241488, guid: b9dc28e0a937e9c46a662965d9431128, type: 3}
       propertyPath: speed
-      value: 3500
+      value: 3000
       objectReference: {fileID: 0}
     - target: {fileID: 7846087726238241488, guid: b9dc28e0a937e9c46a662965d9431128, type: 3}
       propertyPath: cinemachinePlayerCamera
@@ -9032,15 +9032,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 329469960824178872, guid: 083a3b78e5e06db47ba3e8f645e3c908, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.09326259
+      value: 0.09326257
       objectReference: {fileID: 0}
     - target: {fileID: 329469960824178872, guid: 083a3b78e5e06db47ba3e8f645e3c908, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000018193495
+      value: 0.00000001661249
       objectReference: {fileID: 0}
     - target: {fileID: 329469960824178872, guid: 083a3b78e5e06db47ba3e8f645e3c908, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000017041999
+      value: -0.0000000015561055
       objectReference: {fileID: 0}
     - target: {fileID: 329469962395586761, guid: 083a3b78e5e06db47ba3e8f645e3c908, type: 3}
       propertyPath: m_LocalRotation.x
@@ -9056,15 +9056,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 329469962757846982, guid: 083a3b78e5e06db47ba3e8f645e3c908, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.00024344349
+      value: -0.00024344237
       objectReference: {fileID: 0}
     - target: {fileID: 329469962757846982, guid: 083a3b78e5e06db47ba3e8f645e3c908, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -6.385733e-10
+      value: -1.0537064e-11
       objectReference: {fileID: 0}
     - target: {fileID: 329469962757846982, guid: 083a3b78e5e06db47ba3e8f645e3c908, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -1.5545654e-13
+      value: -2.5651692e-15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 083a3b78e5e06db47ba3e8f645e3c908, type: 3}
@@ -11142,6 +11142,8 @@ GameObject:
   - component: {fileID: 1176280028}
   - component: {fileID: 1176280027}
   - component: {fileID: 1176280030}
+  - component: {fileID: 1176280034}
+  - component: {fileID: 1176280033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -11207,7 +11209,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1176280026}
-  m_LocalRotation: {x: -0.0002434428, y: -0.0000000012644826, z: -3.0782988e-13, w: 1}
+  m_LocalRotation: {x: -0.0002434428, y: -3.0952588e-11, z: -7.5351255e-15, w: 1}
   m_LocalPosition: {x: 0.61, y: 2.15, z: -28.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -11249,6 +11251,83 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1176280033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176280026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedProfile: {fileID: 11400000, guid: 8160427417994324985044987d84246b, type: 2}
+  isGlobal: 0
+  blendDistance: 0
+  weight: 0.775
+  priority: 0
+--- !u!114 &1176280034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176280026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeTrigger: {fileID: 1176280029}
+  volumeLayer:
+    serializedVersion: 2
+    m_Bits: 225
+  stopNaNPropagation: 1
+  finalBlitToCameraTarget: 0
+  antialiasingMode: 1
+  temporalAntialiasing:
+    jitterSpread: 0.75
+    sharpness: 0.25
+    stationaryBlending: 0.95
+    motionBlending: 0.85
+  subpixelMorphologicalAntialiasing:
+    quality: 2
+  fastApproximateAntialiasing:
+    fastMode: 0
+    keepAlpha: 0
+  fog:
+    enabled: 1
+    excludeSkybox: 1
+  debugLayer:
+    lightMeter:
+      width: 512
+      height: 256
+      showCurves: 1
+    histogram:
+      width: 512
+      height: 256
+      channel: 3
+    waveform:
+      exposure: 0.12
+      height: 256
+    vectorscope:
+      size: 256
+      exposure: 0.12
+    overlaySettings:
+      linearDepth: 0
+      motionColorIntensity: 4
+      motionGridSize: 64
+      colorBlindnessType: 0
+      colorBlindnessStrength: 1
+  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
+  m_ShowToolkit: 0
+  m_ShowCustomSorter: 0
+  breakBeforeColorGrading: 0
+  m_BeforeTransparentBundles: []
+  m_BeforeStackBundles: []
+  m_AfterStackBundles: []
 --- !u!1001 &1186652080
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11535,7 +11614,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32e2d4e6c3a427848b0cce69bebde96e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeRemaining: 20
+  timeRemaining: 200
   gameManager: {fileID: 1215422682}
   timeText: {fileID: 582059089}
   finishScreen: {fileID: 523284598}
